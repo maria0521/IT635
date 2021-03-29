@@ -11,7 +11,7 @@ while True:
  
   cur.execute("SELECT SUM(Price) FROM TRANSACTIONS WHERE Username = '%s'");
   TotalPrice = cur.fetchall()
-  print("%s has spent a total of: ${TotalPrice}")
+  print(username, " has spent a total of: $", TotalPrice)
   conn.commit()
   
 cur.close()
