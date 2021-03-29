@@ -5,7 +5,7 @@ cur = conn.cursor()
 
 print("Please enter Username")
 Username = str(input())
-cur.execute("SELECT * FROM transactions WHERE Username = %s");
+cur.execute("SELECT * FROM transactions WHERE Username = '%s'");
 result = cur.fetchall()
 for x in result:
     print(x)
