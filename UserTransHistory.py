@@ -6,9 +6,10 @@ cur = conn.cursor()
 while True:
     print("Please enter Username")
     Username = str(input())
-    query = "SELECT * FROM transactions WHERE Username = %s"
-    cur.execute(query)
+    cur.execute("SELECT * FROM transactions WHERE Username = %s");
     result = cur.fetchall()
+    for x in result:
+     print(x)
     conn.commit()
 
 cur.close()
