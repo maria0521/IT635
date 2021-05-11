@@ -9,7 +9,7 @@ while True:
   username = str(input())
  
  
-  cur.execute("SELECT SUM(Price) FROM TRANSACTIONS WHERE Username = '%s'");
+  cur.execute("SELECT SUM(total) FROM TRANSACTIONS WHERE Username = '%s'");
   TotalPrice = cur.fetchall()
   print(username, " has spent a total of: $", TotalPrice)
   conn.commit()
